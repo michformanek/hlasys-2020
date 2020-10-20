@@ -1,0 +1,68 @@
+# Extension > Nettrine
+#
+extensions:
+
+	# Dbal
+	nettrine.dbal: Nettrine\DBAL\DI\DbalExtension
+	nettrine.dbal.console: Nettrine\DBAL\DI\DbalConsoleExtension
+
+	# Orm
+	nettrine.orm: Nettrine\ORM\DI\OrmExtension
+	nettrine.orm.cache: Nettrine\ORM\DI\OrmCacheExtension
+	nettrine.orm.console: Nettrine\ORM\DI\OrmConsoleExtension
+	nettrine.orm.annotations: Nettrine\ORM\DI\OrmAnnotationsExtension
+
+	nettrine.annotations: Nettrine\Annotations\DI\AnnotationsExtension
+	nettrine.cache: Nettrine\Cache\DI\CacheExtension
+	nettrine.migrations: Nettrine\Migrations\DI\MigrationsExtension
+	nettrine.fixtures: Nettrine\Fixtures\DI\FixturesExtension
+	nettrine.extensions.beberlei: Nettrine\Extensions\Beberlei\DI\BeberleiBehaviorExtension
+
+nettrine.dbal:
+	debug:
+		panel: %debugMode%
+	configuration:
+		sqlLogger: Nettrine\DBAL\Logger\PsrLogger(@Monolog\Logger)
+	connection:
+		driver: %database.driver%
+		host: database
+		user: test
+		password: test
+		dbname: test
+
+nettrine.orm:
+	entityManagerDecoratorClass: App\Model\Database\EntityManager
+	configuration:
+		autoGenerateProxyClasses: %debugMode%
+
+nettrine.orm.annotations:
+	namespaces:
+		- App\Model\Database\Entity
+	paths:
+		- %appDir%/model/Database/Entity
+
+nettrine.orm.cache:
+
+nettrine.cache:
+#	driver: Doctrine\Common\Cache\ApcuCache
+
+nettrine.migrations:
+	table: doctrine_migrations
+	column: version
+	directory: %rootDir%/db/Migrations
+	namespace: Database\Migrations
+	versionsOrganization: null
+
+nettrine.extensions.beberlei:
+    driver: mysql
+
+nettrine.fixtures:
+	paths:
+		- %rootDir%/db/Fixtures
+
+decorator:
+	Doctrine\Common\EventSubscriber:
+		tags: [nettrine.subscriber]
+
+services:
+	- Nettrine\Migrations\Events\FixPostgreSQLDefaultSchemaSubscriber

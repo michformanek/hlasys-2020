@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="panel panel-default">
+
+		<div class="panel-body">
+			<ul class="media-list">
+				{foreach $comments as $comment}
+					<li class="media">
+						<div class="media-body">
+							<h4 class="media-heading">
+								{$comment->getUser()->getUsername()}
+								<br>
+								<small>
+									{$comment->getCreatedAt()|date:'j. n. Y'}
+								</small>
+							</h4>
+							<p>
+								{$comment->getText()}
+							</p>
+						</div>
+					</li>
+					<hr />
+				{/foreach}
+		</div>
+	</div>
+</div>

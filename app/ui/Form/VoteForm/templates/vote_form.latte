@@ -1,0 +1,17 @@
+<div class="text-center">
+	{if $proposal->isDeleted()}
+		U smazaných návrhů nelze hlasovat
+		{*	{elseif $proposal->getVoteType()->getName() == App\Model\Database\Entity\VoteType::TYPE_VV && !$user->isInRole('VV')}*}
+		{*		U tohoto druhu návrhů nemůžete hlasovat.*}
+	{elseif $vote == null}
+		Pro tento návrh jste ještě nehlasoval. <br><br>
+		<a n:href="positive" class=" btn btn-success btn--icon waves-effect ajax"> Pro </a>
+		<a n:href="negative" class=" btn btn-danger btn--icon waves-effect ajax"> Proti </a>
+	{elseif $vote->isPositive()}
+		Tento návrh jste schválil, ale můžete si to ještě rozmyslet.<br><br>
+		<a n:href="negative" class="btn btn-danger btn--icon waves-effect ajax"> Proti </a>
+	{else}
+		Tento návrh jste zamítl, můžete ho ještě schválit.<br><br>
+		<a n:href="positive" class="btn btn-success btn--icon waves-effect ajax"> Pro </a>
+	{/if}
+</div>

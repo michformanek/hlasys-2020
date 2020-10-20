@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:composer" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:composer" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:phpstan" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="33272bd4-50bb-4fff-9a6f-5fe2cad27add" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.docker/database/initDb.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/ext/apitte.neon" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Api/Logs/Facade/LogsFacade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Api/Logs/Response/LogResDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Api/Proposals/Facade/ProposalsFacade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Api/Proposals/Response/ProposalResDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Api/Users/Facade/UsersFacade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Api/Users/Response/UserResDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Api/Votes/Facade/VotesFacade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Api/Votes/Response/VoteResDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Api/Watches/Facade/WatchesFacade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Api/Watches/Response/WatchResDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Comment/CommentFacade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Proposal/ProposalFacade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/domain/Vote/VoteFacade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Entity/Comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Entity/Item.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Entity/Log.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Entity/Proposal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Entity/Status.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Entity/Vote.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Entity/VoteType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Entity/Watch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Repository/CommentRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Repository/ItemRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Repository/LogRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Repository/ProposalRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Repository/StatusRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Repository/VoteRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Repository/VoteTypeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Database/Repository/WatchRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/Exception/Runtime/Database/EntityNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Api/V1/Logs/LogsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Api/V1/Logs/LogsOneController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Api/V1/Proposals/ProposalsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Api/V1/Proposals/ProposalsOneController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Api/V1/Users/UsersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Api/V1/Users/UsersOneController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Api/V1/Votes/VotesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Api/V1/Votes/VotesOneController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Api/V1/Watches/WatchesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Api/V1/Watches/WatchesOneController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Changelog/ChangelogPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Changelog/templates/default.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Create/CreatePresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Detail/DetailPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Detail/templates/default.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Proposal/ProposalPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Proposal/templates/deleted.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Proposal/templates/mine.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Proposal/templates/so.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Proposal/templates/unvoted.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Proposal/templates/vv.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Search/SearchPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Search/templates/default.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Sign/SignPresenter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modules/Front/Sign/templates/out.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Control/CommentTable/CommentTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Control/CommentTable/CommentTableFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Control/CommentTable/templates/comment_table.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Control/Grid/ProposalGrid.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Control/Grid/ProposalGridFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Control/Grid/templates/grid.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Control/Grid/templates/grid_template.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Control/VoteTable/VoteTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Control/VoteTable/VoteTableFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Control/VoteTable/templates/vote_table.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Form/CommentForm/CommentForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Form/CommentForm/templates/comment_form.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Form/ProposalForm/ProposalForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Form/VoteForm/VoteForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Form/VoteForm/templates/vote_form.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Navigation/Navbar/Navbar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Navigation/Navbar/templates/navbar.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Navigation/NavigationFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Navigation/Sidebar/Sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Navigation/Sidebar/templates/sidebar.latte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/Migrations/Version20200720140034.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/Migrations/Version20200720140035.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/Migrations/Version20200820140034.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/Migrations/Version20200820142653.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/Migrations/Version20200820144915.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/Migrations/Version20200820145546.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.docs/assets/screenshot1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.docs/assets/screenshot2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.docs/assets/screenshot3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.docs/assets/screenshot4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/.kodiak.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/FUNDING.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/dependabot.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/app/parameters.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/app/parameters.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/app/services.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/app/services.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.local.neon.dist" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.local.neon.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/env/base.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/env/base.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/ext/nettrine.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/ext/nettrine.neon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Console/HelloCommand.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Database/Entity/AbstractEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Database/Entity/AbstractEntity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Database/Entity/Attributes/TCreatedAt.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Database/Entity/Attributes/TCreatedAt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Database/Entity/Attributes/TId.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Database/Entity/Attributes/TId.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Database/Entity/Attributes/TUpdatedAt.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Database/Entity/Attributes/TUpdatedAt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Database/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Database/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Database/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Database/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Database/TRepositories.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Database/TRepositories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Security/Authenticator/UserAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Security/Authenticator/UserAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Security/Authorizator/StaticAuthorizator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Security/Identity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Security/Identity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Security/Passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Security/SecurityUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Security/SecurityUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Admin/BaseAdminPresenter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Admin/Home/HomePresenter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Admin/Home/templates/default.latte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Admin/Sign/SignPresenter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Admin/Sign/templates/in.latte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Admin/templates/@layout.latte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Base/SecuredPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/Base/SecuredPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Base/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/Base/templates/@layout.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Front/BaseFrontPresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/Front/BaseFrontPresenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Front/Home/templates/default.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/Front/Home/templates/default.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modules/Front/templates/@layout.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/modules/Front/templates/@layout.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/Form/FormFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/Form/FormFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/Fixtures/UserFixture.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/Migrations/Version20190407153346.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/www/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/assets/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/assets/admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/assets/front.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/assets/front.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/assets/front.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/assets/front.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="3ea665ae-8969-434e-b56d-2d50291510b7" name="localhost" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/html" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/nettrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/nettrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/nettrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/nettrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/vendor/slevomat/coding-standard" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/contributte/application" />
+      <path value="$PROJECT_DIR$/vendor/contributte/bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/contributte/cache" />
+      <path value="$PROJECT_DIR$/vendor/contributte/di" />
+      <path value="$PROJECT_DIR$/vendor/contributte/console" />
+      <path value="$PROJECT_DIR$/vendor/contributte/console-extra" />
+      <path value="$PROJECT_DIR$/vendor/contributte/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/contributte/event-dispatcher-extra" />
+      <path value="$PROJECT_DIR$/vendor/contributte/forms" />
+      <path value="$PROJECT_DIR$/vendor/contributte/http" />
+      <path value="$PROJECT_DIR$/vendor/contributte/latte" />
+      <path value="$PROJECT_DIR$/vendor/contributte/mail" />
+      <path value="$PROJECT_DIR$/vendor/contributte/mailing" />
+      <path value="$PROJECT_DIR$/vendor/contributte/monolog" />
+      <path value="$PROJECT_DIR$/vendor/contributte/neonizer" />
+      <path value="$PROJECT_DIR$/vendor/contributte/security" />
+      <path value="$PROJECT_DIR$/vendor/contributte/tracy" />
+      <path value="$PROJECT_DIR$/vendor/contributte/utils" />
+      <path value="$PROJECT_DIR$/vendor/contributte/dev" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/php-parallel-lint/php-parallel-lint" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/latte/latte" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/nette/http" />
+      <path value="$PROJECT_DIR$/vendor/nette/routing" />
+      <path value="$PROJECT_DIR$/vendor/nette/component-model" />
+      <path value="$PROJECT_DIR$/vendor/nette/application" />
+      <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/nette/finder" />
+      <path value="$PROJECT_DIR$/vendor/nette/robot-loader" />
+      <path value="$PROJECT_DIR$/vendor/nette/php-generator" />
+      <path value="$PROJECT_DIR$/vendor/nette/neon" />
+      <path value="$PROJECT_DIR$/vendor/nette/di" />
+      <path value="$PROJECT_DIR$/vendor/nette/bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/nette/caching" />
+      <path value="$PROJECT_DIR$/vendor/nette/forms" />
+      <path value="$PROJECT_DIR$/vendor/nette/mail" />
+      <path value="$PROJECT_DIR$/vendor/nette/security" />
+      <path value="$PROJECT_DIR$/vendor/nette/tester" />
+      <path value="$PROJECT_DIR$/vendor/tracy/tracy" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/alice" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/ninjify/nunjuck" />
+      <path value="$PROJECT_DIR$/vendor/ninjify/coding-standard" />
+      <path value="$PROJECT_DIR$/vendor/ninjify/qa" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpdoc-parser" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpstan" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpstan-deprecation-rules" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpstan-doctrine" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpstan-nette" />
+      <path value="$PROJECT_DIR$/vendor/phpstan/phpstan-strict-rules" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/nettrine/fixtures" />
+      <path value="$PROJECT_DIR$/vendor/nettrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/contributte/middlewares" />
+      <path value="$PROJECT_DIR$/vendor/contributte/psr7-http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/apitte/core" />
+      <path value="$PROJECT_DIR$/vendor/apitte/debug" />
+      <path value="$PROJECT_DIR$/vendor/apitte/middlewares" />
+      <path value="$PROJECT_DIR$/vendor/apitte/openapi" />
+      <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/ublaboo/datagrid" />
+      <path value="$PROJECT_DIR$/vendor/beberlei/doctrineextensions" />
+      <path value="$PROJECT_DIR$/vendor/nettrine/extensions-beberlei" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1gM5YcfwUQOtxFVZPTdyVcVFK55" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/db/Migrations" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/ui/Form/CommentForm" />
+      <recent name="$PROJECT_DIR$/app/ui/Navigation/Sidebar/templates" />
+      <recent name="$PROJECT_DIR$/app/ui/Navigation/Navbar/templates" />
+      <recent name="$PROJECT_DIR$/app/ui/Control/Grid" />
+      <recent name="$PROJECT_DIR$/app/ui/Control/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/db/Migrations" />
+      <recent name="$PROJECT_DIR$/app/model/Database/Repository" />
+      <recent name="$PROJECT_DIR$/app/ui/Control" />
+      <recent name="$PROJECT_DIR$/app/ui/Form/Search" />
+      <recent name="$PROJECT_DIR$/app/modules/Front/Proposal/templates" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33272bd4-50bb-4fff-9a6f-5fe2cad27add" name="Default Changelist" comment="" />
+      <created>1597911669320</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597911669320</updated>
+      <workItem from="1597911670701" duration="6045000" />
+      <workItem from="1597918011982" duration="4426000" />
+      <workItem from="1597922633132" duration="13823000" />
+      <workItem from="1598088343941" duration="14000" />
+      <workItem from="1598089982870" duration="859000" />
+      <workItem from="1598097109684" duration="541000" />
+      <workItem from="1598598412296" duration="9298000" />
+      <workItem from="1598609533277" duration="5457000" />
+      <workItem from="1598616125987" duration="11340000" />
+      <workItem from="1599033614690" duration="7314000" />
+      <workItem from="1599042780169" duration="4531000" />
+      <workItem from="1599050077718" duration="14000" />
+      <workItem from="1599056058949" duration="608000" />
+      <workItem from="1599823747844" duration="6993000" />
+      <workItem from="1600079455921" duration="7748000" />
+      <workItem from="1600193793345" duration="189000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="861" y="470" width="188" height="179" key="#PHP_CodeSniffer_Ignored_Files" timestamp="1598097617435">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="861" y="470" width="188" height="179" key="#PHP_CodeSniffer_Ignored_Files/0.27.1920.1053@0.27.1920.1053" timestamp="1598097617435" />
+    <state x="276" y="406" width="1358" height="301" key="#SQL_Dialects" timestamp="1597932886827">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="276" y="406" width="1358" height="301" key="#SQL_Dialects/0.27.1920.1053@0.27.1920.1053" timestamp="1597932886827" />
+    <state x="543" y="211" width="824" height="691" key="#Servers" timestamp="1599036438630">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="543" y="211" width="824" height="691" key="#Servers/0.27.1920.1053@0.27.1920.1053" timestamp="1599036438630" />
+    <state x="555" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599825084730">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1599825084730" />
+    <state x="661" y="354" width="614" height="406" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598620912296">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="661" y="354" width="614" height="406" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1598620912296" />
+    <state x="752" y="232" width="437" height="719" key="#com.intellij.ide.util.MemberChooser" timestamp="1600086450860">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="752" y="232" width="437" height="719" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1600086450860" />
+    <state x="704" y="27" width="502" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600086386594">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="704" y="27" width="502" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600086386594" />
+    <state x="693" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600083518839">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="693" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600083518839" />
+    <state x="718" y="297" key="#xdebugger.evaluate" timestamp="1600085270951">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="718" y="297" key="#xdebugger.evaluate/0.27.1920.1053@0.27.1920.1053" timestamp="1600085270951" />
+    <state x="100" y="127" width="1720" height="853" key="DiffContextDialog" timestamp="1598609232581">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="100" y="127" width="1720" height="853" key="DiffContextDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1598609232581" />
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1598088356622">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1598088356622" />
+    <state width="1874" height="340" key="GridCell.Tab.0.bottom" timestamp="1600188218789">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218789" />
+    <state width="1874" height="340" key="GridCell.Tab.0.center" timestamp="1600188218789">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218789" />
+    <state width="1874" height="340" key="GridCell.Tab.0.left" timestamp="1600188218789">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218789" />
+    <state width="1874" height="340" key="GridCell.Tab.0.right" timestamp="1600188218789">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218789" />
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1600188218790">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218790" />
+    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1600188218790">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218790" />
+    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1600188218789">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218789" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1600188218790">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218790" />
+    <state width="1874" height="340" key="GridCell.Tab.2.bottom" timestamp="1600188218791">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.2.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218791" />
+    <state width="1874" height="340" key="GridCell.Tab.2.center" timestamp="1600188218790">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.2.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218790" />
+    <state width="1874" height="340" key="GridCell.Tab.2.left" timestamp="1600188218790">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.2.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218790" />
+    <state width="1874" height="340" key="GridCell.Tab.2.right" timestamp="1600188218791">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.2.right/0.27.1920.1053@0.27.1920.1053" timestamp="1600188218791" />
+    <state x="635" y="269" width="703" height="575" key="NewPhpClassDialog" timestamp="1600086377698">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="635" y="269" width="703" height="575" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600086377698" />
+    <state x="756" y="478" width="397" height="158" key="NewPhpFileDialog" timestamp="1597915809844">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="756" y="478" width="397" height="158" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1597915809844" />
+    <state x="695" y="394" width="1125" height="675" key="PhpMappingAdvancedResolveDialog" timestamp="1599037032257">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="695" y="394" width="1125" height="675" key="PhpMappingAdvancedResolveDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1599037032257" />
+    <state x="753" y="226" width="403" height="662" key="RollbackChangesDialog" timestamp="1597915880725">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="753" y="226" width="403" height="662" key="RollbackChangesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1597915880725" />
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1599037072894">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1599037072894" />
+    <state x="100" y="127" width="1720" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1597919935884">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="100" y="127" width="1720" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1597919935884" />
+    <state x="570" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597932294096">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="570" y="167" width="770" height="780" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1597932294096" />
+    <state x="743" y="467" width="433" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598608630585">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="743" y="467" width="433" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1598608630585" />
+    <state x="785" y="108" width="1135" height="801" key="find.popup" timestamp="1600193955024">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="785" y="108" width="1135" height="801" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600193955024" />
+    <state x="671" y="324" width="567" height="465" key="refactoring.ChangeSignatureDialog" timestamp="1600080183188">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="671" y="324" width="567" height="465" key="refactoring.ChangeSignatureDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600080183188" />
+    <state x="624" y="252" width="672" height="677" key="run.anything.popup" timestamp="1600079841247">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="624" y="252" width="672" height="677" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600079841247" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1600086575010">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600086575010" />
+  </component>
+</project>

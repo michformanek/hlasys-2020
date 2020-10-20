@@ -1,0 +1,117 @@
+# Services
+#
+services:
+	# Api =================
+	- App\Domain\Api\Comments\Facade\CommentsFacade
+	- App\Domain\Api\Logs\Facade\LogsFacade
+	- App\Domain\Api\Proposals\Facade\ProposalsFacade
+	- App\Domain\Api\Users\Facade\UsersFacade
+	- App\Domain\Api\Votes\Facade\VotesFacade
+	- App\Domain\Api\Watches\Facade\WatchesFacade
+
+	# Domain =================
+	- App\Domain\User\CreateUserFacade
+	- App\Domain\Vote\VoteFacade
+	- App\Domain\Comment\CommentFacade
+	- App\Domain\Proposal\ProposalFacade
+#	- App\Domain\Order\OrderLogSubscriber
+#	- App\Domain\Http\RequestLoggerSubscriber
+
+
+	# Forms
+	- App\UI\Form\FormFactory
+
+	# Grids & tables
+	- App\UI\Control\Grid\ProposalGridFactory
+	- App\UI\Control\VoteTable\VoteTableFactory
+	- App\UI\Control\CommentTable\CommentTableFactory
+
+	# Navigation
+	- App\UI\Navigation\NavigationFactory
+
+
+	# Latte/Templates
+	latte.latteFactory:
+		setup:
+			- addFilter(datetime, App\Model\Latte\Filters::datetime)
+			- addFilter(neon, App\Model\Latte\Filters::neon)
+			- addFilter(json, App\Model\Latte\Filters::json)
+
+	latte.templateFactory:
+		class: App\Model\Latte\TemplateFactory
+
+
+	# Security ================
+	nette.userStorage:
+		setup:
+			- setNamespace("Hlasys")
+
+	security.user: App\Model\Security\SecurityUser
+	security.authenticator: App\Model\Security\Authenticator\UserAuthenticator
+
+
+	# Routing ================
+	- App\Model\Router\RouterFactory
+	router:
+		class: Nette\Application\IRouter
+		factory: @App\Model\Router\RouterFactory::create
+
+	## Serialize =============
+	symfony.serializer.serializer:
+		factory: Symfony\Component\Serializer\Serializer
+		arguments:
+			normalizers:
+				- Symfony\Component\Serializer\Normalizer\DateTimeNormalizer()
+				- Symfony\Component\Serializer\Normalizer\ArrayDenormalizer()
+				- @symfony.serializer.objectNormalizer
+			encoders:
+				- Symfony\Component\Serializer\Encoder\JsonEncoder()
+
+	symfony.serializer.objectNormalizer:
+		factory: Symfony\Component\Serializer\Normalizer\ObjectNormalizer(
+			classMetadataFactory: @symfony.serializer.classMetadataFactory,
+			nameConverter: Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter(),
+			propertyAccessor: null,
+			propertyTypeExtractor: Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor()
+		)
+		autowired: false
+
+	symfony.serializer.classMetadataFactory:
+		factory: Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory(@symfony.serializer.annotationLoader)
+		autowired: false
+
+	symfony.serializer.annotationLoader:
+		factory: Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader(
+			Doctrine\Common\Annotations\CachedReader(
+				@symfony.serializer.annotationReader,
+				Doctrine\Common\Cache\FilesystemCache(%tempDir%/cache/Symfony.Serializer)
+			)
+		)
+		autowired: false
+
+	symfony.serializer.annotationReader:
+		factory: Doctrine\Common\Annotations\AnnotationReader
+		autowired: false
+		setup:
+			- addGlobalIgnoredName(phpcsSuppress)
+
+	## Validator =============
+	symfony.validator:
+		type: Symfony\Component\Validator\Validator\ValidatorInterface
+		factory: @symfony.validator.builder::getValidator()
+
+	symfony.validator.builder:
+		type: Symfony\Component\Validator\ValidatorBuilder
+		factory: Symfony\Component\Validator\Validation::createValidatorBuilder()::enableAnnotationMapping(
+			Doctrine\Common\Annotations\CachedReader(
+				@symfony.serializer.annotationReader,
+				Doctrine\Common\Cache\FilesystemCache(%tempDir%/cache/Symfony.Validator)
+			)
+		)
+		autowired: false
+
+
+
+latte:
+	macros:
+		- App\Model\Latte\Macros::register

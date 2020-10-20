@@ -1,0 +1,21 @@
+{foreach $votes as $vote}
+	{first}
+		<table class="table table-sm table-bordered text-center">
+		<tbody>
+	{/first}
+{first 7}
+<tr>
+{/first}
+	{if $iterator->getCounter() - 1 < $positiveCount}
+		<td class="table-success" >{$vote->getUsername()}</td>
+	{elseif $iterator->getCounter() - 1 < $negativeCount + $positiveCount}
+		<td class="table-danger" >{$vote->getUsername()}</td>
+	{elseif $iterator->getCounter() - 1 < $negativeCount + $positiveCount + $didNotVoteCount}
+		<td class="table-active" >{$vote->getUsername()}</td>
+	{/if}
+{last 7}</tr>{/last}
+	{last}
+		</tbody>
+		</table>
+	{/last}
+{/foreach}

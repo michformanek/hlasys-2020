@@ -1,0 +1,57 @@
+version: '3.4'
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./.docker/nginx/Dockerfile
+    volumes:
+      - ./:/var/www/html/
+      - ./.docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./.docker/nginx/sites/:/etc/nginx/sites-available
+      - ./.docker/nginx/conf.d/:/etc/nginx/conf.d
+    depends_on:
+      - php
+    ports:
+      - "80:80"
+      - "443:443"
+  php:
+    build:
+      context: .
+      dockerfile: ./.docker/php/Dockerfile
+    volumes:
+      - ./:/var/www/html/
+    depends_on:
+      - database
+    environment:
+      NETTE_DEBUG: 0
+      PHP_EXTENSION_XDEBUG: 0
+      PHP_AUTH_USER: 1980
+#      STARTUP_COMMAND_1: composer require nettrine/extensions-beberlei
+      #      STARTUP_COMMAND_1: composer install
+#      STARTUP_COMMAND_1: NETTE_DEBUG=1 php bin/console migrations:generate --no-interaction
+      STARTUP_COMMAND_2: NETTE_DEBUG=1 php bin/console orm:schema-tool:update --dump-sql --force
+      STARTUP_COMMAND_3: NETTE_DEBUG=1 php bin/console migrations:migrate --no-interaction --allow-no-migration
+      STARTUP_COMMAND_4: rm -rf temp/cache
+#      STARTUP_COMMAND_3: NETTE_DEBUG=1 php bin/console doctrine:fixtures:load --no-interaction
+  database:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MYSQL_DATABASE: test
+    volumes:
+      - ./.docker/database:/docker-entrypoint-initdb.d:cached,ro
+  #      - database-volume:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+  adminer:
+    image: dockette/adminer:dg
+    ports:
+      - 8080:80
+
+volumes:
+  database-volume:
